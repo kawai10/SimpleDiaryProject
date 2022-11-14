@@ -29,6 +29,7 @@ const reducer = (state, action) => {
 		default:
 			return state;
 	}
+	return newState;
 };
 
 export const DiaryStateContext = React.createContext();
