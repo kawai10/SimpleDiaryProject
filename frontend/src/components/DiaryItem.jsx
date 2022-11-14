@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const DiaryItem = ({ id, emotion, content, date }) => {
 	const navigate = useNavigate();
-	console.log(`content : ${content}`);
-	console.log(`emotion : ${emotion}`);
 
 	const strDate = new Date(parseInt(date)).toLocaleDateString();
 
