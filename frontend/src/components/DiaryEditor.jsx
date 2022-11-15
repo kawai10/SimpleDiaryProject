@@ -1,7 +1,7 @@
 import MyHeader from './MyHeader';
 import MyButton from './MyButton';
 import { useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import EmotionItem from './EmotionItem';
 import { DiaryDispatchContext } from '../App';
 import { getStringDate } from '../util/date';
@@ -51,9 +51,9 @@ const DiaryEditor = ({ isEdit, originData }) => {
 		}
 	};
 
-	const handleClickEmote = emotion => {
+	const handleClickEmote = useCallback(emotion => {
 		setEmotion(emotion);
-	};
+	}, []);
 
 	return (
 		<div className={'DiaryEditor'}>
